@@ -19,7 +19,4 @@ plot4_func <- function(pow_data){
                      ylab="Global Rective Power (kilowatts)",xlab="")
         })
         
-        ## Saving to file
-        dev.copy(png, file="plot4.png", width = 480, height = 480)
-        dev.off()
 }

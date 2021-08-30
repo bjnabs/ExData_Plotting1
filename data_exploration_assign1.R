@@ -8,7 +8,7 @@ source('plot4.R') ##
 
 #
 # Step 1: Get the dataset 
-household_pow_data <- read.table("./household_power_consumption/household_power_consumption.txt", sep = ";", header = TRUE, na.strings = "?", colClasses = c('character','character','numeric','numeric','numeric','numeric','numeric','numeric','numeric') )
+household_pow_data <- read.table("C:/Users/Nabus/OneDrive/Documents/R/household_power_consumption.txt", sep = ";", header = TRUE, na.strings = "?", colClasses = c('character','character','numeric','numeric','numeric','numeric','numeric','numeric','numeric') )
 str(household_pow_data)
 
 ## Format date to Type Date
@@ -40,6 +40,21 @@ View(household_pow_data)
 #call the plot functions
 
 plot1_func(household_pow_data)
+## Save file and close device
+dev.copy(png, file = "plot1.png", width = 480, height = 480)
+dev.off()
+
 plot2_func(household_pow_data)
+dev.copy(png, file ="plot2.png", width = 480, height = 480)
+dev.off()
+
+
 plot3_func(household_pow_data)
+## Saving to file
+dev.copy(png, file="plot3.png", width = 480, height = 480)
+dev.off()
+
 plot4_func(household_pow_data)
+## Saving to file
+dev.copy(png, file="plot4.png", width = 480, height = 480)
+dev.off()
